@@ -21,7 +21,4 @@ const user = {
     }
 }
 
-
-console.log(user);
-
 export {user}
