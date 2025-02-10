@@ -25,7 +25,8 @@ const screen = {
 
          user.events.forEach(event => { 
             if(event.type === "PushEvent"){
-                eventsItens += `<li>${event.type} - Repositório ${event.repo.name}</li>`
+                eventsItens += `<li>${event.repo.name} - ${event.payload.commits[0].message}</li>`
+                console.log(event.payload.commits[0].message)
             }else if(event.type === "CreateEvent"){
                 eventsItens += `<li>${event.type} - Sem mensagem de commit </li>`}
         }) 
